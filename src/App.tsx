@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import VerticalChart from "./components/VerticalChart";
+import HorizontalChart from "./components/HorizontalChart";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HorizontalChart
+        data={{
+          title: 'autumn',
+          values: [
+            {title: 'JS', value: 100, color: '#fca'},
+            {title: 'PHP', value: 64}, {title: 'PHP', value: 1},
+            {title: 'PHP', value: 84}, {title: 'PHP', value: 11}
+          ]
+        }}
+        style={{gap: 10, defaultColor: '#aaf'}}
+      />
     </div>
   );
 }
