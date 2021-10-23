@@ -31,10 +31,10 @@ const HorizontalChart: FC<ChartProps> = ({data, style}) => {
           if (value.color) {
             ctx.fillStyle = value.color
           }
-          ctx.fillRect(gap + 40, delta - colWidth / 2, height, colWidth)
+          ctx.fillRect(gap + 60, delta - colWidth / 2, height, colWidth)
 
           ctx.fillStyle = fontColor
-          ctx.fillText(value.title, gap + 15, delta + gap / 2, colWidth)
+          ctx.fillText(value.title, gap + 25, delta + gap / 2, 60)
 
           ctx.fillStyle = defaultColor
           delta += colWidth + gap
