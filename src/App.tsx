@@ -3,6 +3,7 @@ import './App.css';
 import VerticalChart from "./components/VerticalChart";
 import HorizontalChart from "./components/HorizontalChart";
 import CurvedChart from "./components/CurvedChart";
+import StraightChart from "./components/StraightChart";
 
 function App() {
   return (
@@ -29,18 +30,28 @@ function App() {
       {/*  }}*/}
       {/*  style={{gap: 10, defaultColor: '#aaf'}}*/}
       {/*/>*/}
-      <CurvedChart
+      {/*<CurvedChart*/}
+      {/*  data={{*/}
+      {/*    title: 'autumn',*/}
+      {/*    values: [*/}
+      {/*      {title: 'Title1', value: [50, 100, 150, 200, 550, 200, 150, 100, 50], color: 'red'},*/}
+      {/*      {title: 'Title2', value: [64, 100, 124], color: '#000'},*/}
+      {/*      {title: 'Title2', value: [10, 20, 30, 40, 50, 60]},*/}
+      {/*    ]*/}
+      {/*  }}*/}
+      {/*  style={{defaultColor: '#aaf'}}*/}
+      {/*  valTitles={['jan', 'feb', 'march', 'april', 'may', 'june', 'jule', 'august', 'september']}*/}
+      {/*/>*/}
+      <StraightChart
+        valTitles={['jan', 'feb', 'march', 'april', 'may', 'june', 'jule', 'august', 'september']}
         data={{
           title: 'autumn',
           values: [
             {title: 'Title1', value: [50, 100, 150, 200, 550, 200, 150, 100, 50], color: 'red'},
             {title: 'Title2', value: [64, 100, 124], color: '#000'},
             {title: 'Title2', value: [10, 20, 30, 40, 50, 60]},
-          ]
-        }}
-        style={{defaultColor: '#aaf'}}
-        valTitles={['jan', 'feb', 'march', 'april', 'may', 'june', 'jule', 'august', 'september']}
-      />
+          ],
+        }}/>
     </div>
   );
 }
