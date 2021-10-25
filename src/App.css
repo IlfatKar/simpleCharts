@@ -7,9 +7,12 @@
 .App {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: auto auto;
+  padding: 20px;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
 }
 
 .graph {

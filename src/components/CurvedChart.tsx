@@ -105,10 +105,10 @@ const CurvedChart: FC<LineChartProps> = ({data, style, valTitles}) => {
   )
 
   return (
-    <>
+    <div style={{position: 'relative'}}>
       <canvas ref={canvas} className={'graph'}/>
-      <canvas ref={bgCanvas} style={{position: 'absolute'}}/>
-    </>
+      <canvas ref={bgCanvas} style={{top: 0, left: 0, position: 'absolute'}}/>
+    </div>
   )
 }
 
